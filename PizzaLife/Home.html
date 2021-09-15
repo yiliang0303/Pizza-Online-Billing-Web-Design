@@ -1,0 +1,620 @@
+﻿<!DOCTYPE html>
+<html>
+<!-- HOME PAGE -->
+<!--NAME : CHONG TZE WEE
+	TUROTIAL CLASS : 1DCN1 -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Pizza Life | Home Page</title>
+<link href="mainLayout.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="icon" href="Image/PizzaLifeLogo.png" />	
+<script src="pizzaInfo.js"></script>
+
+
+<!--------------------------------CSS styles---------------------------->
+<style>
+/*-----------------------------Background image CSS------------------*/
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* {
+  box-sizing: border-box;
+}
+*/
+.bg-image {
+  /* The image used */
+  margin-top:20px;
+  background-image: url('Image/HomePage/Pizza-Promotion.jpg');
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 400px; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  margin-top:280px;
+  
+}
+
+/*-----------------------------Slideshow code CSS--------------------------*/
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: block;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 3000px;
+  position: relative;
+  margin: 20px 20px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/*----------------------------Promotion image------------------------*/
+
+.proimg .first{
+	margin:40px 150px 40px 150px;
+	
+	
+	
+}
+
+.protext{
+    position: relative;
+    font-size: 30px;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    padding:20px;
+    
+}
+.protext:before, .protext:after {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 50%;
+    height: 3px;
+    content: '\a0';
+    background-color: silver;
+   
+}
+.protext:before {
+    margin-left: -50%;
+    text-align: right;
+}
+.color {
+    background-color: #ccc;
+}
+
+.proimg img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+
+
+/*---------------------------Star Rating CSS-----------------------------*/
+.size{
+	width:800px;
+	margin:20px 20px 20px 0px;
+	border:10px solid #CC0000;
+	border-left: 0px;
+	padding: 50px;
+	float:left;
+	height:500px;
+	margin-top:50px;
+	
+	
+}
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+
+/*-------------------------Google Maps CSS------------------------------*/
+
+.protext2{
+    position: relative;
+    font-size: 30px;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    padding:20px;
+    
+}
+.protext2:before, .protext2:after {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 50%;
+    height: 3px;
+    content: '\a0';
+    background-color: silver;
+   
+}
+.protext2:before {
+    margin-left: -50%;
+    text-align: right;
+}
+.color {
+    background-color: #ccc;
+}
+
+.mapouter{position:relative;text-align:left;height:500px;width:600px;margin:50px 0px 50px 50px;float:left; }
+.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;border:10px solid #CC0000;}
+
+
+</style>
+
+
+<!----------------------------End Of CSS------------------------------------->
+<!-- For Modal -->
+<link href="modal.css" rel="stylesheet" type="text/css"/>
+
+<!-- For Sweet Alert -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript">
+	function sweetAlertFunction1()
+	{
+		swal("Successfully Added To Cart!","","success");
+	}
+</script>
+</head>
+
+<body >
+<header id="backTop">
+<div id="logo"><a href="#" style="cursor:default">
+<img src="Image/PizzaLifeLogo.png" width="80" height="80" style="float:left;"/>
+<h1> Pizza <span id="yellow">Life</span> </h1></a>
+</div>
+
+<nav class="ribbon">
+	<a href="#">
+		<div class="dropdown">
+  			<span class="dropbtn">
+  				<img src="Image/fork.png" title="menu" width="25" height="25" align="absmiddle"/>MENU
+ 			</span>
+ 		
+			<div class="dropdown-content">
+    			<a href="MainMenu.html" onclick="resize(3);">Pizza</a>
+    			<a href="MainMenu.html" onclick="resize(2);">Sides</a>
+   				<a href="MainMenu.html" onclick="resize(1);">Beverage</a>
+  			</div>
+		</div>
+	</a>
+	   
+	<a href="promotion.html"><span><img src="Image/discount.png" title="promotion" width="25" height="25" align="absmiddle" />
+	PROMOTION </span></a>
+	
+	<a href="whatsNew.html"><span><img src="Image/burn.png" title="what's new" width="25" height="25" align="absmiddle"/>
+	WHAT'S NEW</span></a>
+	
+	<a href="AboutUs.html"><span><img src="Image/enterprise.png" title="about us" width="25" height="25" align="absmiddle"/>
+	 ABOUT US </span></a>
+	 
+	<a href="AccountsSetting.html" target="_blank"><span><img src="Image/settings.png" title="settings" width="25" height="25" align="absmiddle"/>
+	 SETTINGS </span></a>
+	 
+	<a href="Login.html"><span><img src="Image/login.png" title="login" width="28" height="32" align="absmiddle"/>
+	  LOGIN   </span></a>
+	  
+	<a href="Register.html"><span><img src="Image/register.png" title="register" width="26" height="26" align="absmiddle"/>
+	 REGISTER </span></a>
+</nav>
+
+<div class="scrollbar">
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+
+<!-----------------------------Background Image-------------------------------------->	
+	<div class="bg-image"></div>
+
+	<div class="bg-text">
+	  <h2>====================================</h2>
+	  <h1 style="font-size:50px; font-family:'Comic Sans MS'">PIZZA IS LIFE</h1>
+	  <h2>====================================</h2>
+	</div>
+
+<!---------------------------Slide Show----------------------------------------------->
+	<div class="slideshow-container"  >
+	
+	<div class="mySlides fade">
+	  <img src="Image/HomePage/syioknya1_5b98e86a81c40.png" style="width:100%" />
+	  <div class="text"></div>
+	</div>
+	
+	<div class="mySlides fade">
+	  <img src="Image/HomePage/lunchtime_specials.jpg" style="width:100%"/>
+	  <div class="text"></div>
+	</div>
+	
+	<div class="mySlides fade">
+	  <img src="Image/HomePage/Pizza-Promotion.jpg" style="width:100%" />
+	  <div class="text"></div>
+	</div>
+	
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	
+	</div>
+	<br />
+	
+		
+			<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+			
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+			
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+			
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+			      slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+			      dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " active";
+			}
+			</script>
+			
+<!-----------------------------Promotion image--------------------------->
+<p class="protext" style=" font-family:Verdana, Geneva, Tahoma, sans-serif; color: balck; text-align:center; ">
+\  MOST POPULAR PIZZA DEALS  /</p>
+
+	<div class="proimg">
+		<a href="promotion.html"><span class="first"><img src="Image/HomePage/PHMY_awesome_20190304.jpg" alt="Pizza" width="500" height="300" style="border:5px double #CC0000;"></span></a>
+		<a href="promotion.html"><span class="second"><img src="Image/HomePage/PHMY_doubleboxextracheese_20190228.jpg" alt="Pizza" width="500" height="300" style="border:5px double #CC0000;"></span></a>
+
+	
+	</div>
+
+
+<!------------------------------Google Maps------------------------->
+<p class="protext2" style=" font-family:Verdana, Geneva, Tahoma, sans-serif; color: balck; text-align:center; ">
+\  LOCATE US &amp; USER RATING  /</p>
+
+	<div class="mapouter"><div class="gmap_canvas">
+	<iframe width="600" height="500" id="gmap_canvas" 
+	src="https://maps.google.com/maps?q=taruc%20college%20penang&t=&z=1&ie=UTF8&iwloc=&output=embed" 
+	frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+	Werbung: <a href="https://www.jetzt-drucken-lassen.de">jetzt-drucken-lassen.de</a></div>
+	</div>
+
+<!--------------------Star Rating-------------------------->
+<div class="size">
+	<span class="heading">User Rating</span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star"></span>
+	<p>4.1 average based on 1270 reviews.</p>
+	<hr style="border:3px solid #f1f1f1">
+	
+	<div class="row">
+	  <div class="side">
+	    <div>5 star</div>
+	  </div>
+	  <div class="middle">
+	    <div class="bar-container">
+	      <div class="bar-5"></div>
+	    </div>
+	  </div>
+	  <div class="side right">
+	    <div>750</div>
+	  </div>
+	  <div class="side">
+	    <div>4 star</div>
+	  </div>
+	  <div class="middle">
+	    <div class="bar-container">
+	      <div class="bar-4"></div>
+	    </div>
+	  </div>
+	  <div class="side right">
+	    <div>315</div>
+	  </div>
+	  <div class="side">
+	    <div>3 star</div>
+	  </div>
+	  <div class="middle">
+	    <div class="bar-container">
+	      <div class="bar-3"></div>
+	    </div>
+	  </div>
+	  <div class="side right">
+	    <div>75</div>
+	  </div>
+	  <div class="side">
+	    <div>2 star</div>
+	  </div>
+	  <div class="middle">
+	    <div class="bar-container">
+	      <div class="bar-2"></div>
+	    </div>
+	  </div>
+	  <div class="side right">
+	    <div>30</div>
+	  </div>
+	  <div class="side">
+	    <div>1 star</div>
+	  </div>
+	  <div class="middle">
+	    <div class="bar-container">
+	      <div class="bar-1"></div>
+	    </div>
+	  </div>
+	  <div class="side right">
+	    <div>100</div>
+	  </div>
+	</div>
+</div>
+
+<!---------------------Footer--------------------->
+<footer>
+	<div id="countdown" style="width:350px;">
+		<img src="Image/PizzaLifeLogo.png" width="120" height="120" style="float:left; margin-top:20px;"/>
+	
+		<h3 style="font-variant:small-caps">Pizza Life Anniversary Countdown</h3>
+		<script type="text/javascript">
+		
+		var countDown = new Date(" June , 22 2019 00:00:00").getTime();
+		
+		var today = new Date();
+		var thisDay = today.getDate();
+		var thisMonth = (today.getMonth() + 1);
+		var thisYear = today.getFullYear();
+		var monthFullText = new Array("","January","February", "March", "April", "May", "June", 
+		"July", "August","September", "October", "November", "December"); 
+		document.write("Today is " + monthFullText[thisMonth] + ", " + thisDay + " " + thisYear);
+		
+		var x = setInterval(function y(){
+		
+		var now = new Date().getTime();
+		var dayLeft = countDown - now;
+		var day = Math.floor(dayLeft / (1000 * 60 * 60 * 24));
+		var hours = Math.floor(dayLeft % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+		var minutes = Math.floor(dayLeft % (1000 * 60 * 60) / (1000 * 60));
+		var seconds = Math.floor(dayLeft % (1000 * 60) / (1000));
+		
+		document.getElementById("timer").innerHTML
+		= "DAY : "+"HR : "+"MIN : "+"SEC"+ "<br/>" + day + " : " + hours + " : "+ minutes + " : "+ seconds;
+		if(dayLeft==0){
+			clearInterval(x);
+			document.getElementById("timer").innerHTML = "HAPPY ANNIVERSARY!";
+		}
+		else if(dayLeft<0){
+			clearInterval(x);
+			document.getElementById("timer").innerHTML = "EXPIRED!";
+		}
+		},1000);
+		</script>
+		
+		<p id="timer"></p>
+	</div>
+	
+	<div class="backToTop">
+		<a href="#backTop"><img src="Image/backToTop.png" alt="TOP" /></a>
+	</div>
+	
+	<div id="information">
+	
+	<p>FOR MORE INFORMATION, FOLLOW US ON:</p>
+	
+	<a href="https://www.facebook.com/" target="_blank" title="Click to connect to Facebook">
+	<img src="Image/Media/facebook-logo.png" height="21" width="21"/>&nbsp;&nbsp;FACEBOOK</a> <br/>
+	
+	<a href="https://www.instagram.com/jiazhe1015" target="_blank" title="Click to connect Instagram">
+	<img src="Image/Media/InstaIcon.png" height="21" width="21"/>&nbsp;&nbsp;INSTAGRAM</a> <br/>
+	
+	<a href="https://twitter.com/" target="_blank" title="Click to connect Twitter">
+	<img src="Image/Media/twitter-logo.png" height="21" width="21"/>&nbsp;&nbsp;TWITTER</a> <br/>
+	
+	<br/>
+	
+	<p>Copyright &copy; all rights reserved</p>
+	
+	</div>
+	<marquee style="font-weight:bold">Email : pizzaLife@gmail.com</marquee>
+</footer>
+</body>
+
+</html>
