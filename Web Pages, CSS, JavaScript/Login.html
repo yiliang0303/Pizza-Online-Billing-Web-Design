@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- LOGIN -->
+<!--NAME : MELVIN TAN JIE YOU | ONG YILIANG (CSS)
+	TUROTIAL CLASS : 1DCN1 -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Pizza Life | Login</title>
+<link href="Image/login.png" rel="icon" />
+<link href="loginpg.css" rel="stylesheet" type="text/css"/>
+<link href="mainLayout.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+
+function userValid()
+{
+	var username1 = "pizzalife";
+	var pass1 = "123456";
+	if(document.getElementById("uname").value == username1 && document.getElementById("pw").value == pass1)
+	{
+		return true;
+	}	
+	else
+	{	
+		if(document.getElementById("uname").value != username1){
+			alert("Invalid username.");
+			document.getElementById("uname").select();
+		}
+		if(document.getElementById("pw").value != pass1)
+		{
+			alert("Invalid Password.");
+			document.getElementById("pw").select();
+		}
+		
+		return false;
+	}
+	
+}
+</script>
+</head>
+
+<body>
+
+<header id="backTop">
+<div id="logo"><a href="Home.html">
+<img src="Image/PizzaLifeLogo.png" width="80" height="80" style="float:left;"/>
+<h1> Pizza <span id="yellow">Life</span> </h1></a>
+</div>
+
+<nav class="ribbon">
+	<a href="#">
+		<div class="dropdown">
+  			<span class="dropbtn">
+  				<img src="Image/fork.png" title="menu" width="25" height="25" align="absmiddle" />MENU
+ 			</span>
+ 		
+			<div class="dropdown-content">
+    			<a href="MainMenu.html" onclick="resize(3);">Pizza</a>
+    			<a href="MainMenu.html" onclick="resize(1);">Beverage</a>
+    			<a href="MainMenu.html" onclick="resize(2);">Sides</a>
+  			</div>
+		</div>
+	</a>
+	   
+	<a href="promotion.html"><span><img src="Image/discount.png" title="promotion" width="25" height="25" align="absmiddle" />
+	PROMOTION </span></a>
+	
+	<a href="whatsNew.html"><span><img src="Image/burn.png" title="what's new" width="25" height="25" align="absmiddle" />
+	WHAT'S NEW</span></a>
+	
+	<a href="AboutUs.html"><span><img src="Image/enterprise.png" title="about us" width="25" height="25" align="absmiddle" />
+	 ABOUT US </span></a>
+	 
+	<a href="AccountsSetting.html" target="_blank"><span><img src="Image/settings.png" title="settings" width="25" height="25" align="absmiddle" />
+	 SETTINGS </span></a>
+	 
+	<a href="#"><span><img src="Image/login.png" title="login" width="28" height="32" align="absmiddle" />
+	  LOGIN   </span></a>
+	  
+	<a href="Register.html"><span><img src="Image/register.png" title="register" width="26" height="26" align="absmiddle" />
+	 REGISTER </span></a>
+</nav>
+
+<div class="scrollbar">
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+
+
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+</header>
+
+<form style="border:1px solid #ccc" action="Home.html" method="post" onsubmit="return userValid();">
+
+  <div class="container">
+  <fieldset>
+  	<legend align="center"><img src="Image/loginLegend.png" alt="Login" width="100" height="100" /></legend>
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" id="uname"required="required" autofocus="autofocus"/> <br /><br />
+
+    <label for="pw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="pw" id="pw" required/>
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember"/> Remember me
+    </label>
+
+	<div>
+    	<button type="submit">Login</button>
+ 	</div>
+ 	</fieldset>
+  </div>
+
+  <div class="container" style="background-color:white">
+  	<button type="button" class="cancelbut" onclick="window.history.go(-1); return false;">Cancel</button>
+    <span class="pw"><a href="">Forgot password?</a></span>
+  </div>
+</form>
+
+<footer>
+	<div id="countdown" style="width:350px;">
+		<img src="Image/PizzaLifeLogo.png" width="120" height="120" style="float:left; margin-top:20px;"/>
+	
+		<h3 style="font-variant:small-caps">Pizza Life Anniversary Countdown</h3>
+		<script type="text/javascript">
+		
+		var countDown = new Date(" June , 22 2019 00:00:00").getTime();
+		
+		var today = new Date();
+		var thisDay = today.getDate();
+		var thisMonth = (today.getMonth() + 1);
+		var thisYear = today.getFullYear();
+		var monthFullText = new Array("","January","February", "March", "April", "May", "June", 
+		"July", "August","September", "October", "November", "December"); 
+		document.write("Today is " + monthFullText[thisMonth] + ", " + thisDay + " " + thisYear);
+		
+		var x = setInterval(function y(){
+		
+		var now = new Date().getTime();
+		var dayLeft = countDown - now;
+		var day = Math.floor(dayLeft / (1000 * 60 * 60 * 24));
+		var hours = Math.floor(dayLeft % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+		var minutes = Math.floor(dayLeft % (1000 * 60 * 60) / (1000 * 60));
+		var seconds = Math.floor(dayLeft % (1000 * 60) / (1000));
+		
+		document.getElementById("timer").innerHTML
+		= "DAY : "+"HR : "+"MIN : "+"SEC"+ "<br/>" + day + " : " + hours + " : "+ minutes + " : "+ seconds;
+		if(dayLeft==0){
+			clearInterval(x);
+			document.getElementById("timer").innerHTML = "HAPPY ANNIVERSARY!";
+		}
+		else if(dayLeft<0){
+			clearInterval(x);
+			document.getElementById("timer").innerHTML = "EXPIRED!";
+		}
+		},1000);
+		</script>
+		
+		<p id="timer"></p>
+	</div>
+	
+	<div class="backToTop">
+		<a href="#backTop"><img src="Image/backToTop.png" alt="TOP" /></a>
+	</div>
+	
+	<div id="information">
+	
+	<p>FOR MORE INFORMATION, FOLLOW US ON:</p>
+	
+	<a href="https://www.facebook.com/" target="_blank" title="Click to connect to Facebook">
+	<img src="Image/Media/facebook-logo.png" height="21" width="21"/>&nbsp;&nbsp;FACEBOOK</a> <br/>
+	
+	<a href="https://www.instagram.com/" target="_blank" title="Click to connect Instagram">
+	<img src="Image/Media/InstaIcon.png" height="21" width="21"/>&nbsp;&nbsp;INSTAGRAM</a> <br/>
+	
+	<a href="https://twitter.com/" target="_blank" title="Click to connect Twitter">
+	<img src="Image/Media/twitter-logo.png" height="21" width="21"/>&nbsp;&nbsp;TWITTER</a> <br/>
+	
+	<br/>
+	
+	<p>Copyright &copy; all rights reserved</p>
+	</div>
+	<marquee style="font-weight:bold">Email : pizzaLife@gmail.com</marquee>
+</footer>
+
+</body>
+
+</html>

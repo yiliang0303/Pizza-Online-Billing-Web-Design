@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- ABOUT US -->
+<!--NAME : MELVIN TAN JIE YOU
+	TUROTIAL CLASS : 1DCN1 -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Pizza Life | About Us</title>
+<link href="aboutuspg.css" rel="stylesheet" type="text/css"/>
+<link href="mainLayout.css" rel="stylesheet" type="text/css" />
+<link href="Image/enterprise.png" rel="icon" type="icon" />
+
+</head>
+
+
+<body>
+<header id="backTop">
+<div id="logo"><a href="Home.html">
+<img src="Image/PizzaLifeLogo.png" width="80" height="80" style="float:left;"/>
+<h1> Pizza <span id="yellow">Life</span> </h1></a>
+</div>
+
+<nav class="ribbon">
+	<a href="#">
+		<div class="dropdown">
+  			<span class="dropbtn">
+  				<img src="Image/fork.png" title="menu" width="25" height="25" align="absmiddle"/>MENU
+ 			</span>
+ 		
+			<div class="dropdown-content">
+    			<a href="MainMenu.html" onclick="resize(3);">Pizza</a>
+    			<a href="MainMenu.html" onclick="resize(1);">Beverage</a>
+    			<a href="MainMenu.html" onclick="resize(2);">Sides</a>
+  			</div>
+		</div>
+	</a>
+	   
+	<a href="promotion.html"><span><img src="Image/discount.png" title="promotion" width="25" height="25" align="absmiddle" />
+	PROMOTION </span></a>
+	
+	<a href="whatsNew.html"><span><img src="Image/burn.png" title="what's new" width="25" height="25" align="absmiddle" />
+	WHAT'S NEW</span></a>
+	
+	<a href="#"><span><img src="Image/enterprise.png" title="about us" width="25" height="25" align="absmiddle"/>
+	 ABOUT US </span></a>
+	 
+	<a href="AccountsSetting.html"target="_blank"><span><img src="Image/settings.png" title="settings" width="25" height="25" align="absmiddle"/>
+	 SETTINGS </span></a>
+	 
+	<a href="Login.html"><span><img src="Image/login.png" title="login" width="28" height="32" align="absmiddle"/>
+	  LOGIN   </span></a>
+	  
+	<a href="Register.html"><span><img src="Image/register.png" title="register" width="26" height="26" align="absmiddle"/>
+	 REGISTER </span></a>
+</nav>
+
+<div class="scrollbar">
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+
+
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+</header>
+
+
+<section>
+	<div class="timeline">
+	
+  <div class="container left">
+    <div class="content">
+      <h2>1987</h2>
+      <p>
+      This company is originally found by the Margold Brothers,Tim and John.
+      The shop was not called "Pizza Life" at first, but was called "TJ Pizzaplace"
+      before the name change. The two brothers went through some hardships at first,
+      but they have mostly went through it without any issues.     
+      </p>
+    </div>
+  </div>
+  
+  <div class="container right">
+    <div class="content">
+      <h2>1996</h2>
+      <p>
+      The company is starting to see some uprise in their results. Is was at this
+      time where the brothers decided to sell out about over 65% their share to the public.
+      This was when Sir McMicheal came in and bought out their share and changed the way
+      the organisation works.He is also the one who is in-charged of the name change to
+      "Pizza Time".
+      </p>
+    </div>
+  </div>
+  
+    <div class="container left">
+    <div class="content">
+      <h2>Now</h2>
+      <p>
+      Currently,"Pizza Life" is well-known around the globe and is ranked at the top of the
+      pizza place rankings.We currently have around 60+ retail stores throughout the globe
+      and we are planning to increase it again for the next coming years."Pizza Time" is 
+      famous for our hand-made pizzas and side-dishes.It was also around this time,where 
+      we decided to enchance our business capabilities by creating a webpage for our 
+      company to help and improve our non-inhouse business and let others enjoy our products
+      even without coming into our local stores.
+      </p>
+    </div>
+
+</div>
+</div>
+
+</section>
+
+<footer>
+	<div id="countdown" style="width:350px;">
+		<img src="Image/PizzaLifeLogo.png" width="120" height="120" style="float:left; margin-top:20px;"/>
+	
+		<h3 style="font-variant:small-caps">Pizza Life Anniversary Countdown</h3>
+		<script type="text/javascript">
+		
+		var countDown = new Date(" June , 22 2019 00:00:00").getTime();
+		
+		var today = new Date();
+		var thisDay = today.getDate();
+		var thisMonth = (today.getMonth() + 1);
+		var thisYear = today.getFullYear();
+		var monthFullText = new Array("","January","February", "March", "April", "May", "June", 
+		"July", "August","September", "October", "November", "December"); 
+		document.write("Today is " + monthFullText[thisMonth] + ", " + thisDay + " " + thisYear);
+		
+		var x = setInterval(function y(){
+		
+		var now = new Date().getTime();
+		var dayLeft = countDown - now;
+		var day = Math.floor(dayLeft / (1000 * 60 * 60 * 24));
+		var hours = Math.floor(dayLeft % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+		var minutes = Math.floor(dayLeft % (1000 * 60 * 60) / (1000 * 60));
+		var seconds = Math.floor(dayLeft % (1000 * 60) / (1000));
+		
+		document.getElementById("timer").innerHTML
+		= "DAY : "+"HR : "+"MIN : "+"SEC"+ "<br/>" + day + " : " + hours + " : "+ minutes + " : "+ seconds;
+		if(dayLeft==0){
+			clearInterval(x);
+			document.getElementById("timer").innerHTML = "HAPPY ANNIVERSARY!";
+		}
+		else if(dayLeft<0){
+			clearInterval(x);
+			document.getElementById("timer").innerHTML = "EXPIRED!";
+		}
+		},1000);
+		</script>
+		
+		<p id="timer"></p>
+	</div>
+	
+	<div class="backToTop">
+		<a href="#backTop"><img src="Image/backToTop.png" alt="TOP" /></a>
+	</div>
+	
+	<div id="information">
+	
+	<p>FOR MORE INFORMATION, FOLLOW US ON:</p>
+	
+	<a href="https://www.facebook.com/" target="_blank" title="Click to connect to Facebook">
+	<img src="Image/Media/facebook-logo.png" height="21" width="21"/>&nbsp;&nbsp;FACEBOOK</a> <br/>
+	
+	<a href="https://www.instagram.com/" target="_blank" title="Click to connect Instagram">
+	<img src="Image/Media/InstaIcon.png" height="21" width="21"/>&nbsp;&nbsp;INSTAGRAM</a> <br/>
+	
+	<a href="https://twitter.com/" target="_blank" title="Click to connect Twitter">
+	<img src="Image/Media/twitter-logo.png" height="21" width="21"/>&nbsp;&nbsp;TWITTER</a> <br/>
+	
+	<br/>
+	
+	<p>Copyright &copy; all rights reserved</p>
+	
+	</div>
+	<marquee style="font-weight:bold">Email : pizzaLife@gmail.com</marquee>
+</footer>
+
+</body>
+
+
+</html>

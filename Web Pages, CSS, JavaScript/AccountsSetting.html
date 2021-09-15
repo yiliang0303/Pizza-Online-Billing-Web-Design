@@ -1,0 +1,694 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- ACCOUNT SETTING -->
+<!--NAME : CRIST CH'NG JIAN WEI | ONG YILIANG(Save and Edit button in javascript )
+	TUROTIAL CLASS : 1DCN1 -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Pizza Life | Account Settings</title>
+<link href="Image/settings.png" rel="icon"/>
+
+<link href="mainLayout.css" rel="stylesheet" type="text/css" />
+<!-- For Sweet Alert -->
+	<link rel="stylesheet" href="sweetalert.css" />
+	<link rel="stylesheet" href="sweetalert.min.css" />
+	<script src="sweetalert.js"></script>
+	<script src="sweetalert.min.js"></script>
+
+<script type="text/javascript">
+    	
+function spassword() 
+{
+	var x = document.getElementById("password1");
+		if (x.type === "password") 
+	  	{
+	    	x.type = "text";
+	  	} 
+	  	else 
+	  	{
+	    	x.type = "password";
+	  	}
+}    	
+
+function change1()
+{
+	var a = document.getElementById('e1').innerHTML;
+	
+	if(a == "Edit")
+	{
+		document.getElementById('email').disabled = false;
+		document.getElementById('email').select();
+		document.getElementById('e1').innerHTML = "Save";
+
+	}
+	else
+	{
+		document.getElementById('email').disabled = true;
+		document.getElementById('e1').innerHTML = "Edit";
+	}
+}
+
+function change2()
+{
+	var a = document.getElementById('e2');
+	
+	if(a.innerHTML == "Edit")
+	{
+		document.getElementById('fname').disabled = false;
+		document.getElementById('fname').select();
+		document.getElementById('e2').innerHTML = "Save";
+
+	}
+	else
+	{
+			document.getElementById('fname').disabled = true;
+			document.getElementById('e2').innerHTML = "Edit";
+	}
+}
+
+function change3()
+{
+	var a = document.getElementById('e3');
+	
+	if(a.innerHTML == "Edit")
+	{
+		document.getElementById('lname').disabled = false;
+		document.getElementById('lname').select();
+		document.getElementById('e3').innerHTML = "Save";
+	}
+	else{
+		document.getElementById('lname').disabled = true;
+		document.getElementById('e3').innerHTML = "Edit";
+		a.type = "submit"
+		}
+}
+
+function change4()
+{
+	var a = document.getElementById('e4').innerHTML;
+	var v = document.getElementById('uname');
+	
+	if(a == "Edit")
+	{
+		v.disabled = false;
+		v.select();
+		document.getElementById('e4').innerHTML = "Save";
+	}
+	else{
+		v.disabled = true;
+		document.getElementById('e4').innerHTML = "Edit";}
+}
+
+function change5()
+{
+	var a = document.getElementById('e5').innerHTML;
+	var v = document.getElementById('m');
+	
+	if(a == "Edit")
+	{
+		v.disabled = false;
+		document.getElementById('f').disabled = false;
+		document.getElementById('o').disabled = false;
+		v.select();
+		document.getElementById('e5').innerHTML = "Save";
+	}
+	else{
+	v.disabled = true;
+		document.getElementById('f').disabled = true;
+		document.getElementById('o').disabled = true;
+
+		document.getElementById('e5').innerHTML = "Edit";}
+}
+
+function change6()
+{
+	var a = document.getElementById('e6').innerHTML;
+	var v = document.getElementById('date');
+	
+	if(a == "Edit")
+	{
+		v.disabled = false;
+		v.select();
+		document.getElementById('e6').innerHTML = "Save";
+	}
+	else{
+	v.disabled = true;
+		document.getElementById('e6').innerHTML = "Edit";}
+}
+
+function change7()
+{
+	var a = document.getElementById('e7').innerHTML;
+	
+	if(a == "Edit")
+	{
+		document.getElementById('pNum').disabled = false;
+		document.getElementById('pNum').select();
+		document.getElementById('e7').innerHTML = "Save";
+	}
+	else{
+			document.getElementById('pNum').disabled = true;
+			document.getElementById('e7').innerHTML = "Edit";
+		}
+}
+
+function change8()
+{
+	var a = document.getElementById('e8').innerHTML;
+	
+	if(a == "Edit")
+	{
+		document.getElementById('hNum').disabled = false;
+		document.getElementById('hNum').select();
+		document.getElementById('e8').innerHTML = "Save";
+	}
+	else{
+		document.getElementById('hNum').disabled = true;
+		document.getElementById('e8').innerHTML = "Edit";
+		}
+}
+
+function change9()
+{
+	var a = document.getElementById('e9').innerHTML;
+	
+	if(a == "Edit")
+	{
+		document.getElementById('password1').disabled = false;
+		document.getElementById('password1').select();
+		document.getElementById('e9').innerHTML = "Save";
+	}
+	else{
+		document.getElementById('password1').disabled = true;
+		document.getElementById('e9').innerHTML = "Edit";}
+}
+
+function change10()
+{
+	var a = document.getElementById('e10').innerHTML;
+	
+	if(a == "Edit")
+	{
+		document.getElementById('adress').disabled = false;
+		document.getElementById('adress').select();
+		document.getElementById('e10').innerHTML = "Save";
+	}
+	else{
+		document.getElementById('adress').disabled = true;
+		document.getElementById('e10').innerHTML = "Edit";
+		}
+}
+	
+function myfunction()
+{
+
+	swal("Successfully Updated !","","success");
+            
+}
+                
+    
+ </script>
+
+
+<style>
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background:#FFFFCC;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 6px 30px;
+  font-size: 20px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+
+/* -----------------------------------------------------------------------------------------------------------------------*/
+.body{
+	background-image: url('Image/AccountStting/accSet.background.jpg');
+	/*background-attachment: fixed;*/
+	background-size: 400px;
+	background-repeat:repeat;
+	width:1518px;
+}
+
+input[type="email"],[type="password"],[type="text"],[type="date"],[type="tel"]
+{
+	width:100%; /* Full width */
+	padding:10px; /* Some padding */ 
+	border: 1px solid #ccc; /* Gray border */
+  	border-radius: 6px; /* Rounded borders */
+	
+}
+
+button{
+	background-color:#333333;
+	color:pink;
+	border:0px;
+	padding:5px 20px;
+	border-radius: 6px;
+	cursor:pointer;
+
+}
+
+.sub{
+	/*width: 0px;
+	height: 55px;*/
+	border-radius: 6px;
+	padding:5px 10px;
+	background-color: #333333;
+	color:pink;
+	cursor:pointer;
+}
+
+#submit, .cancel{
+	width: 80px;
+	height: 30px;
+	border-radius: 6px;
+}	
+
+table{
+	padding-top:160px;
+	width:700px;
+}
+</style>
+
+
+</head>
+
+<body>
+<header id="backTop">
+<div id="logo"><a href="Home.html">
+<img src="Image/PizzaLifeLogo.png" width="80" height="80" style="float:left;"/>
+<h1> Pizza <span id="yellow">Life</span> </h1></a>
+</div>
+
+<nav class="ribbon">
+	<a href="#">
+		<div class="dropdown">
+  			<span class="dropbtn">
+  				<img src="Image/fork.png" title="menu" width="25" height="25" align="absmiddle" />MENU
+ 			</span>
+ 		
+			<div class="dropdown-content">
+    			<a href="MainMenu.html" onclick="resize(3);">Pizza</a>
+    			<a href="MainMenu.html" onclick="resize(1);">Beverage</a>
+    			<a href="MainMenu.html" onclick="resize(2);">Sides</a>
+  			</div>
+		</div>
+	</a>
+	   
+	<a href="promotion.html"><span><img src="Image/discount.png" title="promotion" width="25" height="25" align="absmiddle" />
+	PROMOTION </span></a>
+	
+	<a href="whatsNew.html"><span><img src="Image/burn.png" title="what's new" width="25" height="25" align="absmiddle" />
+	WHAT'S NEW</span></a>
+	
+	<a href="AboutUs.html"><span><img src="Image/enterprise.png" title="about us" width="25" height="25" align="absmiddle" />
+	 ABOUT US </span></a>
+	 
+	<a href="#"><span><img src="Image/settings.png" title="settings" width="25" height="25" align="absmiddle" />
+	 SETTINGS </span></a>
+	 
+	<a href="Login.html"><span><img src="Image/login.png" title="login" width="28" height="32" align="absmiddle" />
+	  LOGIN   </span></a>
+	  
+	<a href="Register.html"><span><img src="Image/register.png" title="register" width="26" height="26" align="absmiddle" />
+	 REGISTER </span></a>
+</nav>
+
+<div class="scrollbar">
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+
+
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+</header>
+
+
+<div align="center" class="body">
+
+<form name="form" id="form">
+<table cellpadding="12" cellspacing="6"> 
+	<tr>
+		<th colspan="4" style="font-size:26px; text-align:center"><small>&#9881;</small> Account Setting</th>
+	
+	</tr>
+	
+	<tr>
+		<td >Email</td>
+		<td>:</td>
+		<td>
+			<input name="email" id="email" type="email" value="pizzalife@gmail.com" disabled="disabled" />
+	
+		</td>
+		<td>
+		<label class="sub" onclick="change1();"><span id="e1">Edit</span></label>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>First Name</td>
+		<td>:</td>
+		<td>
+			<input name="fname" id="fname" type="text" maxlength="60"value="Pizza" disabled="disabled" />
+		
+		</td>
+		
+		<td>
+			<label class="sub" onclick="change2();"><span id="e2">Edit</span></label>
+		
+		</td>
+	</tr>
+	
+	<tr>
+		<td>Last Name</td>
+		<td>:</td>
+		<td>
+			<input name="lname" id="lname" type="text" maxlength="20"value="Life" disabled="disabled" />
+		
+		</td>
+		<td>
+			<label class="sub" onclick="change3();"><span id="e3">Edit</span></label>
+		
+		</td>
+	</tr>
+	
+	<tr>
+		<td>User Name</td>
+		<td>:</td>
+		<td>
+			<input name="uname" id="uname" type="text" placeholder="Nickname" maxlength="20" value="pizzaLife"disabled="disabled" />
+		
+		</td>
+		<td>
+			<label class="sub" onclick="change4();"><span id="e4">Edit</span></label>
+		
+		</td>
+	</tr>
+
+	<tr>
+		<td >Gender</td>
+		<td>:</td>
+		<td>
+			<fieldset style="background-color:white">
+				<br />
+				<input name="gender" id="m" type="radio" checked="checked" disabled="disabled" />
+				<label for="m">Male &#128102;</label>
+				
+				<input name="gender" id="f" type="radio" disabled="disabled" />
+				<label for="f">Female &#128103;</label>
+				
+				<input name="gender" id="o" type="radio" disabled="disabled"/>
+				<label for="o">Other &#128125;</label>
+				<br />
+			
+			</fieldset>
+		
+		</td>
+		<td>
+			<label class="sub" onclick="change5();"><span id="e5">Edit</span></label>
+		
+		</td>
+	</tr>
+	
+	<tr>
+		<td>Date of Birth</td>
+		<td>:</td>
+		<td>
+			<input name="date" id="date" type="text" value="01/01/2000" disabled="disabled"/>
+			
+		</td>
+		<td>
+			<label class="sub" onclick="change6(); document.getElementById('date').type = 'date';"><span id="e6">Edit</span></label>
+		
+		</td>
+	</tr>
+	
+	<tr>
+		<td>Phone No.</td>
+		<td>:</td>
+		<td>
+			<input name="pNum" id="pNum" type="tel" 
+			 placeholder="011-12345678" title="Must contain at format: 011-12345678" maxlength="12" value="011-12345678" disabled="disabled" />
+		 
+		</td>
+		<td>
+			<label class="sub" onclick="change7();"><span id="e7">Edit</span></label>
+		
+		</td>
+	</tr>
+		
+	<tr>
+		<td>Home No.</td>
+		<td>:</td>
+		<td>
+			<input name="hNum" id="hNum" type="tel" 
+			 placeholder="04-9812345" pattern="[0-9]{2}-[0-9]{7}" title="Must contain at format: 04-9812345" maxlength="10" value="04-1234567" disabled="disabled" />
+			
+		</td>
+		<td>
+			<label class="sub" onclick="change8();"><span id="e8">Edit</span></label>
+		
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top">Passsword</td>
+		<td valign="top">:</td>
+		<td>
+			<input name="password" id="password1" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+			title="Must contain at least one number and one uppercase and 
+			lowercase letter, and at least 8 or more characters" value="aA123456" disabled="disabled" />
+			<input type="checkbox" onclick="spassword()" />Show Password
+		
+			<div id="message">
+			  <h3 >Password <span style="font-size:26px; color:red">MUST</span> contain the following :</h3>
+			  <p id="letter" class="invalid">A <strong>lowercase</strong> letter</p>
+			  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+			  <p id="number" class="invalid">A <strong>number</strong></p>
+			  <p id="length" class="invalid">Minimum <b><i>8</i> characters</b></p>
+			</div>
+			
+			<script>
+				var myInput = document.getElementById("password1");
+				var letter = document.getElementById("letter");
+				var capital = document.getElementById("capital");
+				var number = document.getElementById("number");
+				var length = document.getElementById("length");
+				
+				// When the user clicks on the password field, show the message box
+				myInput.onfocus = function() 
+				{
+				  document.getElementById("message").style.display = "block";
+				}
+				
+				// When the user clicks outside of the password field, hide the message box
+				myInput.onblur = function() 
+				{
+				  document.getElementById("message").style.display = "none";
+				}
+				
+				// When the user starts to type something inside the password field
+				myInput.onkeyup = function() 
+				{
+				  // Validate lowercase letters
+				  var lowerCaseLetters = /[a-z]/g;
+				  if(myInput.value.match(lowerCaseLetters)) 
+				  {  
+				    letter.classList.remove("invalid");
+				    letter.classList.add("valid");
+				  } 
+				  else 
+				  {
+				    letter.classList.remove("valid");
+				    letter.classList.add("invalid");
+				  }
+				  
+				  // Validate capital letters
+				  var upperCaseLetters = /[A-Z]/g;
+				  if(myInput.value.match(upperCaseLetters)) 
+				  {  
+				    capital.classList.remove("invalid");
+				    capital.classList.add("valid");
+				  } 
+				  else 
+				  {
+				    capital.classList.remove("valid");
+				    capital.classList.add("invalid");
+				  }
+				
+				  // Validate numbers
+				  var numbers = /[0-9]/g;
+				  if(myInput.value.match(numbers)) 
+				  {  
+				    number.classList.remove("invalid");
+				    number.classList.add("valid");
+				  } 
+				  else 
+				  {
+				    number.classList.remove("valid");
+				    number.classList.add("invalid");
+				  }
+				  
+				  // Validate length
+				  if(myInput.value.length >= 8) 
+				  {
+				    length.classList.remove("invalid");
+				    length.classList.add("valid");
+				  } 
+				  else 
+				  {
+				    length.classList.remove("valid");
+				    length.classList.add("invalid");
+				  }
+				}
+			</script>
+			
+		</td>
+		
+		<td valign="top">
+			<label class="sub" onclick="change9();"><span id="e9">Edit</span></label>
+		
+		</td>
+	</tr>	
+	
+	<tr valign="top">
+		<td>Home Address</td>
+		<td>:</td>
+		<td>
+			<textarea name="address" id="adress" cols="30" rows="5" disabled="disabled">77, Lorong Lembah Permai Tiga, Tanjung Tokong, 11200 Tanjung Bungah, Pulau Pinang</textarea>
+		
+		</td>
+		<td>
+			<label class="sub" onclick="change10();"><span id="e10">Edit</span	></label>
+		
+		</td>
+	</tr>
+	
+	<tr>
+		<td></td>
+		<td></td>
+		<td>
+			<input name="submit" id="submit" type="button" value="Submit" onclick="return myfunction()" />
+					
+			<input type="button" name="cancel" value="Cancel" class="cancel" 
+			onclick="confirm('Are you sure that you would like to close this window?')?window.close(): location.reload();" />
+
+
+		</td>
+	</tr>
+	
+</table>
+
+</form>
+
+</div>	
+
+<footer>
+	<div id="countdown" style="width:350px;">
+		<img src="Image/PizzaLifeLogo.png" width="120" height="120" style="float:left; margin-top:20px;"/>
+	
+		<h3 style="font-variant:small-caps">Pizza Life Anniversary Countdown</h3>
+		<script type="text/javascript">
+		
+		var countDown = new Date(" June , 22 2019 00:00:00").getTime();
+		
+		var today = new Date();
+		var thisDay = today.getDate();
+		var thisMonth = (today.getMonth() + 1);
+		var thisYear = today.getFullYear();
+		var monthFullText = new Array("","January","February", "March", "April", "May", "June", 
+		"July", "August","September", "October", "November", "December"); 
+		document.write("Today is " + monthFullText[thisMonth] + ", " + thisDay + " " + thisYear);
+		
+		var x = setInterval(function y(){
+		
+		var now = new Date().getTime();
+		var dayLeft = countDown - now;
+		var day = Math.floor(dayLeft / (1000 * 60 * 60 * 24));
+		var hours = Math.floor(dayLeft % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+		var minutes = Math.floor(dayLeft % (1000 * 60 * 60) / (1000 * 60));
+		var seconds = Math.floor(dayLeft % (1000 * 60) / (1000));
+		
+		document.getElementById("timer").innerHTML
+		= "DAY : "+"HR : "+"MIN : "+"SEC"+ "<br/>" + day + " : " + hours + " : "+ minutes + " : "+ seconds;
+		if(dayLeft==0){
+			clearInterval(x);
+			document.getElementById("timer").innerHTML = "HAPPY ANNIVERSARY!";
+		}
+		else if(dayLeft<0){
+			clearInterval(x);
+			document.getElementById("timer").innerHTML = "EXPIRED!";
+		}
+		},1000);
+		</script>
+		
+		<p id="timer"></p>
+	</div>
+	
+	<div class="backToTop">
+		<a href="#backTop"><img src="Image/backToTop.png" alt="TOP" /></a>
+	</div>
+	
+	<div id="information">
+	
+	<p>FOR MORE INFORMATION, FOLLOW US ON:</p>
+	
+	<a href="https://www.facebook.com/" target="_blank" title="Click to connect to Facebook">
+	<img src="Image/Media/facebook-logo.png" height="21" width="21"/>&nbsp;&nbsp;FACEBOOK</a> <br/>
+	
+	<a href="https://www.instagram.com/" target="_blank" title="Click to connect Instagram">
+	<img src="Image/Media/InstaIcon.png" height="21" width="21"/>&nbsp;&nbsp;INSTAGRAM</a> <br/>
+	
+	<a href="https://twitter.com/" target="_blank" title="Click to connect Twitter">
+	<img src="Image/Media/twitter-logo.png" height="21" width="21"/>&nbsp;&nbsp;TWITTER</a> <br/>
+	
+	<br/>
+	
+	<p>Copyright &copy; all rights reserved</p>
+	
+	</div>
+	<marquee style="font-weight:bold">Email : pizzaLife@gmail.com</marquee>
+</footer>
+</body>
+
+</html>
